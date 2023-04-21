@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div class="container">
+  <h3>Lista de estudiantes</h3>
+  <li type="button" class="btn btn-primary" (click)="NewStudent()" >Nuevo Estudiante</li>
+<table class="table table-hover">
+    <thead  class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">LastName</th>
+        <th scope="col">BirthDate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let students of studentse" (click)="EditStudent(students.id)">
+        <th scope="row">{{students.id}}</th>
+        <td>{{students.name}}</td>
+        <td>{{students.lastName}}</td>
+        <td>{{students.birthDate}}</td>
+      </tr>
+   
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>

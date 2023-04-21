@@ -1,0 +1,27 @@
+<app-header></app-header>
+    
+<div class="container">
+    <h3>Crear estudiantes</h3>
+    <form [formGroup]="newstudent" (ngSubmit)="PostForm(newstudent)">
+        <div class="form-group">
+            <!-- <label>Id</label>
+            <input type="text" class="form-control" placeholder="id Student" formControlName="id"/> -->
+            <label>Nombre</label>
+            <input type="text" class="form-control" placeholder="Name Student" formControlName="name"/>
+            <label>Apellidos</label>
+            <input type="text" class="form-control" placeholder="lastName Student" formControlName="lastName"/>
+            <label>Fecha</label>
+            <input type="date" class="form-control" placeholder="birthDate Student" formControlName="birthDate"/>
+          
+
+        </div>
+
+        <br><br>
+        <button type="submit" class="btn btn-primary">Crear</button>
+        
+
+    </form>
+
+</div>
+   
+<app-footer></app-footer>
